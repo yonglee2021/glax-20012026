@@ -1,131 +1,112 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>玩具王国 Toy Kingdom</title>
-<style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family: "微软雅黑",sans-serif; color:#333;}
-    header{
-        background:#ffcc00;
-        text-align:center;
-        padding:40px 20px;
-    }
-    header h1{font-size:3rem; color:#222;}
-    header p{font-size:1.2rem; margin-top:8px;}
-
-    .btn-primary{
-        display:inline-block;
-        margin-top:15px;
-        padding:12px 25px;
-        background:#e63946;
-        color:#fff;
-        text-decoration:none;
-        font-weight:600;
-        border-radius:50px;
-        transition:0.3s;
-    }
-    .btn-primary:hover{background:#bf1f2d;}
-
-    .hero{
-        background-image:url("https://placehold.co/1200x500?text=玩具王国 Banner");
-        background-size:cover;
-        background-position:center;
-        height:500px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-    }
-    .hero h2{
-        color:#fff;
-        font-size:2.8rem;
-    }
-
-    .products{
-        max-width:1200px;
-        margin:40px auto;
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap:20px;
-        padding:0 20px;
-    }
-    .toy-card{
-        border:1px solid #eee;
-        border-radius:6px;
-        overflow:hidden;
-        transition:0.3s;
-    }
-    .toy-card:hover{
-        transform:translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .toy-card img{width:100%;}
-
-    .toy-card .info{
-        padding:12px;
-        text-align:center;
-    }
-    .toy-card .info h3{font-size:1.2rem; margin-bottom:8px;}
-    .toy-card .info p{font-size:0.95rem; color:#666;}
-
-    footer{
-        background:#222;
-        color:#fff;
-        text-align:center;
-        padding:20px;
-        margin-top:40px;
-        font-size:0.85rem;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux 爱好者技术看板</title>
+    <style>
+        :root {
+            --bg: #282a36;
+            --fg: #f8f8f2;
+            --cyan: #8be9fd;
+            --green: #50fa7b;
+            --orange: #ffb86c;
+            --pink: #ff79c6;
+            --purple: #bd93f9;
+            --red: #ff5555;
+            --yellow: #f1fa8c;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Fira Code', 'Ubuntu Mono', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            border-bottom: 2px solid var(--purple);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        h1 { color: var(--pink); margin: 0; }
+        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card {
+            background: #44475a;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .card h2 { color: var(--cyan); margin-top: 0; font-size: 1.2rem; }
+        code {
+            background: #6272a4;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: var(--yellow);
+        }
+        .command-list { list-style: none; padding: 0; }
+        .command-list li { margin-bottom: 10px; border-left: 3px solid var(--green); padding-left: 10px; }
+        .warning { color: var(--red); font-weight: bold; }
+        .footer { text-align: center; margin-top: 50px; color: #6272a4; font-size: 0.8rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { text-align: left; padding: 8px; border-bottom: 1px solid #6272a4; }
+        th { color: var(--orange); }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>玩具王国 Toy Kingdom</h1>
-    <p>孩子们的快乐工厂，乐趣无穷！</p>
-    <a href="#products" class="btn-primary">立即探索玩具</a>
+    <h1>sudo su - Linux_Lover</h1>
+    <p>Everything is a file. Except when it's a process.</p>
 </header>
 
-<section class="hero">
-    <h2>发现属于孩子的奇妙世界！</h2>
-</section>
+<div class="container">
+    <!-- 硬件看板 -->
+    <div class="card">
+        <h2>🚀 顶级硬件算力看板</h2>
+        <table>
+            <tr><th>组件</th><th>配置详情</th></tr>
+            <tr><td>GPU</td><td>NVIDIA A800 (Ampere)</td></tr>
+            <tr><td>显存容量</td><td>44.42 GB</td></tr>
+            <tr><td>Python</td><td>3.10 (AI 黄金版本)</td></tr>
+            <tr><td>CUDA</td><td>13.2 / PyTorch cu124</td></tr>
+        </table>
+    </div>
 
-<section id="products" class="products">
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=遥控车" alt="遥控车">
-        <div class="info">
-            <h3>极速遥控车</h3>
-            <p>高性能电动遥控，速度与激情。</p>
-        </div>
+    <!-- 环境搭建总结 -->
+    <div class="card">
+        <h2>🛠️ 炼丹炉搭建心得</h2>
+        <ul class="command-list">
+            <li><strong>显存防御：</strong> 严禁一次性加载超大验证集（曾导致 314 GiB 虚拟分配失败），必须使用 <code>DataLoader</code> 分批次处理[cite: 1]。</li>
+            <li><strong>代码避坑：</strong> PyTorch 2.2+ 环境中，<code>ReduceLROnPlateau</code> 必须移除 <code>verbose</code> 参数以免触发 TypeError[cite: 1]。</li>
+            <li><strong>后台守护：</strong> 使用 <code>nohup ... &</code> 或 <code>tmux</code> 确保 SSH 断开后 Jupyter Lab 依然存活[cite: 1]。</li>
+        </ul>
     </div>
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=积木套装" alt="积木套装">
-        <div class="info">
-            <h3>创意积木套装</h3>
-            <p>释放想象力，无限组合玩法。</p>
-        </div>
-    </div>
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=毛绒玩具" alt="毛绒玩具">
-        <div class="info">
-            <h3>萌趣毛绒玩具</h3>
-            <p>柔软可爱，陪伴每一个温暖时刻。</p>
-        </div>
-    </div>
-    <div class="toy-card">
-        <img src="https://placehold.co/300x200?text=拼图游戏" alt="拼图游戏">
-        <div class="info">
-            <h3>趣味拼图游戏</h3>
-            <p>开发思维，寓教于乐。</p>
-        </div>
-    </div>
-</section>
 
-<footer>
-    &copy; 2026 玩具王国 Toy Kingdom 保留所有权利
-</footer>
+    <!-- 常用指令 -->
+    <div class="card">
+        <h2>⌨️ 肌肉记忆指令 (Survival Commands)</h2>
+        <ul class="command-list">
+            <li><code>nvidia-smi -l 1</code>: 实时监控 A800 显存占用与功率。</li>
+            <li><code>ps -ef | grep jupyter</code>: 寻找走丢的后台进程并用 <code>kill -9</code> 终结它。</li>
+            <li><code>df -h</code>: 检查你的数据集是否撑爆了磁盘。</li>
+        </ul>
+    </div>
+
+    <!-- 信仰区 -->
+    <div class="card">
+        <h2>🐧 Linux 哲学</h2>
+        <blockquote>
+            "Software is like sex: it's better when it's free." <br>
+            <cite>— Linus Torvalds</cite>
+        </blockquote>
+        <p class="warning">警告：不要在 root 身份下直接 <code>pip install</code>，除非你在使用 Conda 虚拟环境！[cite: 1]</p>
+    </div>
+</div>
+
+<div class="footer">
+    Built with Python 3.10 and Coffee. Happy coding within a800_env.
+</div>
 
 </body>
 </html>
